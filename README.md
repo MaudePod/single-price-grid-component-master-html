@@ -1,3 +1,5 @@
+[View Solution](https://maudepod.github.io/single-price-grid-component-master-html/)
+
 # Frontend Mentor - Single price grid component
 
 ![Design preview for the Single price grid component coding challenge](./design/desktop-preview.jpg)
