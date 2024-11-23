@@ -1,0 +1,206 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --brightYellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+    --fontSize: 1rem;
+}
+
+@font-face {
+    font-family: Karla;
+    src: url('Karla/Karla-VariableFont_wght.ttf') format('tff');
+}
+
+html {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    width: 100svw;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    font-size: var(--fontSize);
+    background-color: azure;
+    margin: 0;
+    container: body / inline-size;
+}
+
+section[class="card"] {
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    width: 65vh;
+    height: 500px;
+}
+
+section[class="top"] {
+    display: grid;
+    place-items: center;
+    height: 50cqh;
+    color: var(--grayishBlue);
+    background-color: white;
+}
+
+article[class="intro"] {
+    width: 90%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+article[class="intro"] h1 {
+    color: var(--cyan);
+}
+
+article[class="intro"] h2 {
+    color: var(--brightYellow);
+}
+
+span[class="monthly_price_text"] {
+    display: flex;
+    place-items: center;
+}
+
+span[class="monthy_price"] {
+    color: var(--lightGray);
+    font-size: 1.5rem;
+    display: contents;
+}
+
+section[class="bottom"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    height: 50cqh;
+    background-color: var(--cyan);
+    color: color-mix(in hsl, var(--lightGray) 50%, transparent);
+}
+
+section[class="bottom"] h2 {
+    color: var(--lightGray);
+}
+
+article[class="buy"],
+article[class="why_us"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+}
+
+section[class="right"],
+section[class="right-pad"] {
+    display: grid;
+    place-items: center;
+    background-color: var(--cyan);
+    height: 100%;
+    width: 100%;
+    filter: brightness(105%);
+}
+
+span[class="access"] {
+    color: color-mix(in hsl, var(--lightGray) 70%, transparent);
+}
+
+div[class="attribution"] {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+button {
+    background-color: var(--brightYellow);
+    color: color-mix(in hsl, var(--lightGray) 80%, transparent);
+    border: 0px;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 900;
+    position: relative;
+    box-shadow: 0px 0px 5px var(--brightYellow);
+    cursor: pointer;
+}
+
+@container body (inline-size < 1000px) {
+
+    section[class="card"],
+    section[class="bottom"] {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    section[class="card"] {
+        width: 80%;
+        margin: 50px 0 50px 0;
+    }
+
+    p,
+    h1,
+    h2 {
+        margin: 0;
+        padding: 2%;
+    }
+
+    span[class="monthly_price_text"] {
+        margin: 0;
+    }
+
+    h1 {
+        text-wrap: nowrap;
+        font-size: larger;
+    }
+
+    h2,
+    section[class="bottom"] h2 {
+        font-size: large;
+    }
+
+    article[class="buy"] span {
+        padding: 2%;
+    }
+
+    button {
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    article[class="why_us"] h2 {
+        margin-bottom: 20px;
+    }
+
+    article[class="why_us"] span {
+        padding: 1% 2% 1% 2%;
+    }
+
+    article[class="intro"] {
+        margin: 20px 0 20px 0;
+    }
+
+    article[class="why_us"],
+    article[class="buy"],
+    article[class="top"] {
+        padding-bottom: 10%;
+        padding-top: 10%;
+        height: unset;
+    }
+
+    article[class="top"] {
+        padding: 1%;
+    }
+
+    div[class="attribution"] {
+        position: unset;
+    }
+}
